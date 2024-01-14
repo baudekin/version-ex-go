@@ -62,8 +62,29 @@ func Version2() string {
 ```bash
 git tag v2.0.0
 git push origin v2.0.0
-4. Set default branch to v2 in github. This makes it easy to develop off of the current development branch. 
 ```
+4. Set default branch to v2 in github. This makes it easy to develop off of the current development branch.
+<img width="1486" alt="UpdateGitHub" src="https://github.com/baudekin/version-ex-go/assets/585597/22bf2e68-2611-4990-8111-a2717b052b4c">
+
+5. Update your client to use the v2 version of the api. Note the change to the module name "version-ex-go/v2"
+```go
+package main
+
+import (
+	"fmt"
+	pkgone "github.com/baudekin/version-ex-go/v2/pkg/pkgone"
+)
+
+func main() {
+	fmt.Println(pkgone.Version2())
+}
+```
+6. Run go mod tidy and you program. You should see:
+
+<img width="1123" alt="UpdateClientToUse_v2 0 0" src="https://github.com/baudekin/version-ex-go/assets/585597/fe2b28b0-2955-420d-8284-c81e9d479f89">
+
+
 ## Resources
+
 * https://go.dev/doc/modules/version-numbers
 * https://go.dev/doc/modules/publishing
