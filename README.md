@@ -30,6 +30,10 @@ go mod init github.com/baudekin/version-ex-go/v2
 The go.mod file is where you need to update the version at number number to get the specific version of the code for the major verions number.
 Simply replace the "x"s with number you need and run "go mod tidy"
 
+It should be noted we could use a branch not named after the version you are maintaining. The branch foo represents v3. The only
+thing that matters as far as go is concerned is the tag.
+
+
 ```go
 module SimpleClient
 
