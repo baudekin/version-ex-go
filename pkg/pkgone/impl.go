@@ -1,5 +1,5 @@
 package pkgone
 
-func Version() string {
-	return "Version v1.0.0"
+func Version2() string {
+	return "Version v2.0.0"
 }

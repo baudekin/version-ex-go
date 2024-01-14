@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/baudekin/version-ex-go/pkg/pkgone"
+	"github.com/baudekin/version-ex-go/v2/pkg/pkgone"
 )
 
 func main() {
-	fmt.Println(pkgone.Version())
+	fmt.Println(pkgone.Version2())
 }
