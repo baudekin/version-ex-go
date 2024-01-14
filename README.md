@@ -45,7 +45,7 @@ toolchain go1.21.5
 require github.com/baudekin/version-ex-go v1.0.0
 ```
 4. When you run the example file will the update string repersenting the version.
-
+<img width="964" alt="Versionv_1 0 0" src="https://github.com/baudekin/version-ex-go/assets/585597/c353a580-22b6-457c-94db-6858f105120e">
 
 ## Resources
 * https://go.dev/doc/modules/version-numbers
