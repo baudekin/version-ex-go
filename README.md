@@ -34,7 +34,18 @@ func main() {
 git tag v1.0.0
 git push origin v1.0.0
 ```
-3. Note the calling program file remains the same but go.mod file is updated with the new V1 version.
+3. Note the calling program file remains the same but go.mod file is updated with the new V1 version. See below:
+```go
+module SimpleClient
+
+go 1.21.0
+
+toolchain go1.21.5
+
+require github.com/baudekin/version-ex-go v1.0.0
+```
+4. When you run the example file will the update string repersenting the version.
+
 
 ## Resources
 * https://go.dev/doc/modules/version-numbers
