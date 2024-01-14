@@ -134,6 +134,7 @@ require (
 )
 ```
 5. Run go mod tidy and your program.
+<img width="1039" alt="UpdateTo_v1 0 1" src="https://github.com/baudekin/version-ex-go/assets/585597/446ec729-c81e-464d-976e-d7f560458c31">
 
 
 ## Resources
