@@ -84,6 +84,24 @@ func main() {
 <img width="1123" alt="UpdateClientToUse_v2 0 0" src="https://github.com/baudekin/version-ex-go/assets/585597/fe2b28b0-2955-420d-8284-c81e9d479f89">
 
 
+## Use both versions in your code.
+1. Import v1 with different package alais and use it to invoke Version(). 
+```go
+package main
+
+import (
+	"fmt"
+	pkoneold "github.com/baudekin/version-ex-go/pkg/pkgone"
+	pkgone "github.com/baudekin/version-ex-go/v2/pkg/pkgone"
+)
+
+func main() {
+	fmt.Println(pkgone.Version2())
+	fmt.Println(pkoneold.Version())
+}
+```
+2. Tidy your code and run you program. You should see
+
 ## Resources
 
 * https://go.dev/doc/modules/version-numbers
