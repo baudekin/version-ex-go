@@ -10,7 +10,8 @@ git push origin v0.0.0-beta
 ```
 Now you are ready use the Version function from pkg/pkgone.
 1. Import and use the pkg/pkgone into your go program.
-2. Run: go mod tidy your should see this:
+2. Run: go mod tidy your should see this: 
+<img width="843" alt="GoModTidy" src="https://github.com/baudekin/version-ex-go/assets/585597/08d32555-e73b-486e-bddc-af92b79cbc5a">
 
 Example of using the pkgone version function.
 ```go
