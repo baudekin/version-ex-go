@@ -104,6 +104,38 @@ func main() {
 
 <img width="1009" alt="ReferenceV1AndV2" src="https://github.com/baudekin/version-ex-go/assets/585597/fc9ca017-6c79-44da-b518-b46444f006ec">
 
+# Maintain v1
+1. Checkout the main branch: git checkout main;git pull
+2. Update the code.
+```go
+package pkgone
+
+func Version() string {
+	return "Version v1.0.1"
+}
+```
+3. Commit, tag and push the code.
+```bash
+git commit
+git tag v1.0.1
+git push v1.0.1
+```
+4. Update the go model for client code to use v1.0.1
+```go
+module SimpleClient
+
+go 1.21.0
+
+toolchain go1.21.5
+
+require (
+	github.com/baudekin/version-ex-go v1.0.1
+	github.com/baudekin/version-ex-go/v2 v2.0.0
+)
+```
+5. Run go mod tidy and your program.
+
+
 ## Resources
 
 * https://go.dev/doc/modules/version-numbers
