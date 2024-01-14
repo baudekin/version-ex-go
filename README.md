@@ -102,6 +102,8 @@ func main() {
 ```
 2. Tidy your code and run you program. You should see
 
+<img width="1009" alt="ReferenceV1AndV2" src="https://github.com/baudekin/version-ex-go/assets/585597/fc9ca017-6c79-44da-b518-b46444f006ec">
+
 ## Resources
 
 * https://go.dev/doc/modules/version-numbers
