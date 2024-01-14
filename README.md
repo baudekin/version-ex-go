@@ -1,5 +1,49 @@
 # version-ex-go
-Example on how to do Go Lang versoning.
+Example on how to do Go Lang versoning. First some terminology:
+
+```go
+import (
+	pkoneold "github.com/baudekin/version-ex-go/pkg/pkgone"
+	pkgone "github.com/baudekin/version-ex-go/v2/pkg/pkgone"
+)
+```
+Both "pkoneold" and "pkgone" are alaises to thier respected import packages. The import packages are addressed by
+```
+alais "<repo name/[version]/<package path>"
+```
+For v0 and v1 the verson numbers are ommited. For all higher than v1 the major version must be used to address the package. 
+Modules are how go is maintained. The is one go.mod that contains all the source code dependances for a module. In mono repos their can multiple go.mod file.
+Note the example we are using is for nano repo. Packages are directories that organize the go source code and are define in the source. For the examles we will be useing
+it is "package pkgone". 
+
+The way versioning works in go is by tag name for v0, v1, v2, or vN to refenced in clients go.mod file it must be have a git hub tag of that verion. For clarity
+I have choosed to have the branch name match the version numbers for v2 or greating.  V0 and V1 are maintained on the main brach. Development accurs on the latest version branch 
+and maintenace on older branches. 
+
+In the above examples to create the corresponding module the following commands where run. The first on the main branch 
+and second need to run on v2 branch. 
+```bash
+go mod init github.com/baudekin/version-ex-go
+go mod init github.com/baudekin/version-ex-go/v2
+```
+
+The go.mod file is where you need to update the version at number number to get the specific version of the code for the major verions number.
+Simply replace the "x"s with number you need and run "go mod tidy"
+
+```go
+module SimpleClient
+
+go 1.21.0
+
+toolchain go1.21.5
+
+require (
+	github.com/baudekin/version-ex-go v1.x.x
+	github.com/baudekin/version-ex-go/v2 v2.x.x
+)
+```
+
+The following demostrates how to do this.
 
 ## Version v0
 1. Modify and commit your code.
