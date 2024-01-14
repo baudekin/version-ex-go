@@ -1,5 +1,5 @@
 package pkgone
 
 func Version() string {
-	return "Version 1"
+	return "Version 0"
 }
