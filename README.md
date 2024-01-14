@@ -27,6 +27,15 @@ func main() {
 }
 ```
 
+## Version v1 All releases in V1 must be compatable.
+1. Modify and commit your code.
+2. Tag your code in git hub and push the tag.
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+3. Note the calling program file remains the same but go.mod file is updated with the new V1 version.
+
 ## Resources
 * https://go.dev/doc/modules/version-numbers
 * https://go.dev/doc/modules/publishing
